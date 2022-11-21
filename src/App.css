@@ -5,31 +5,43 @@
 --wheat: #ead2acff;
 --pewter-blue: #9cafb7ff;
 */
-
-:root {
---background: #00a6a6ff;
-margin: 0 auto;
-padding: 0;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-height: 100%;
-width: auto;
-
-}
-
 * {
-  margin: 0;
-  border: 0;
   box-sizing: border-box;
+  --background: #ead2acff;
+  --text-color: #444545ff;
 }
 
 body {
-  background-color: var(--background);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  background: var(--background);
+  color: var(--text-color);
+  font-family: 'Josefin Sans';
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.title {
+    text-align: center;
+}
+
+.search-input {
+  margin-bottom: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.empty {
+  padding: 10px;
 }
