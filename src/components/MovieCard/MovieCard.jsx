@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './MovieCard.css';
 
 const Moviecard = ({ movie }) => {
   return (
@@ -8,11 +8,17 @@ const Moviecard = ({ movie }) => {
         <p>{ movie.Year }</p>
       </div>
       <div className="poster">
-        <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/400'} alt={movie.Title} />
+        <img
+          className="image"
+          src={ movie.Poster !== 'N/A' ?
+            movie.Poster :
+            'https://via.placeholder.com/400'
+          }
+          alt={ movie.Title }
+        />
       </div>
       <div>
-        <h3 className="title">{ movie.Title }</h3>
-        <span>{ movie.Type }</span>
+        <p className="title">{ movie.Title }</p>
       </div>
     </section>
   );

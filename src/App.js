@@ -1,17 +1,13 @@
 /* eslint-disable no-unused-vars */
-
 import React, { useEffect, useState } from 'react';
 import Counter from './components/Counter/Counter';
 import searchIcon from './assets/searchIcon.png';
 import MovieCard from './components/MovieCard/MovieCard';
 import './App.css';
 
-// 9a5fc751
-
 const API_URL = 'http://www.omdbapi.com/?apikey=9a5fc751';
 
-
-function App() {
+const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -22,7 +18,8 @@ function App() {
   };
 
   useEffect(() => {
-    movieSearch('superman');
+    movieSearch(searchTerm);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 
@@ -62,6 +59,6 @@ function App() {
       </div>
     </section>
   );
-}
+};
 
 export default App;
